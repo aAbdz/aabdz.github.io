@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurogeometry Modeling Lab</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #343a40;
+            }
+        
+header {
+    display: flex;
+    align-items: center; /* Vertically centers the logo */
+    justify-content: center;
+    background-color: #e6e9e9ff;
+    color: #222d2e;
+    padding: 1rem 0;
+    position: relative;
+    height: 110px; /* Adjust height if necessary */
+}
+
+.logo {
+    margin-right: 20px; /* Space between the logo and the text */
+    width: 100px; /* Adjust size */
+    height: auto;
+}
+
+.header-text {
+    text-align: center; /* Center the text block */
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+        nav {
+            background-color: #222d2e;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff !important;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+	.home-content {
+    	    display: flex;
+	    flex-direction: column;
+    	    align-items: center; /* Align items to the top */
+            text-align: left; /* Ensure text stays aligned left */
+	}
+
+	.home-text {
+    	    margin-left: -15rem; /* Adds space between the text and the image */
+    	    width: 30%; /* Adjust the width as needed to control text width */
+	}
+
+	.home-image {
+    	    display: flex;
+    	    justify-content: center; /* Center image horizontally */
+	}
+
+	.home-image img {
+	    display: flex;
+	    justify-content: center;
+	    margin-top: -1rem;
+	    max-width: 65%; /* Makes the image responsive */
+    	    height: auto; /* Maintains the image's aspect ratio */
+	    margin-bottom: 2rem; /* Add distance below the image */
+	}
+
+	.home-aka img {
+	    display: flex;
+	    margin-top: -1.2rem;
+	    margin-left: -2rem;
+	    max-width: 60%; /* Makes the image responsive */
+    	    height: auto; /* Maintains the image's aspect ratio */
+	}
+
+
+       	.section {
+            display: none;
+	    display: none;
+            padding: 2rem; /* Add padding to ensure content does not touch the edges */
+            max-width: 90%; /* Adjust the max-width as needed */
+            margin: 0 auto; /* Center the section horizontally */
+            text-align: left; /* Align text to the left */
+        }
+        .section.active {
+            display: block;
+        }
+
+	.section h2 {
+    	    margin-bottom: 1rem; /* Space below headings */
+	}
+
+	/* Optional: adjust padding and margin of content elements */
+	.section p {
+    	    margin-bottom: 1rem; /* Space between paragraphs */
+	}
+
+        footer {
+            background-color: #222d2e;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+	    position: relative;
+        }
+
+.team-member {
+    display: flex;
+    align-items: flex-start; /* Vertically aligns the photo and text */
+    margin-bottom: 2rem; /* Adds space below each team member */
+    margin-left: -2rem; /* Adds space below each team member */
+    width: 75%; /* Adjust the width as needed to control text width */
+    outline: none; /* Remove any outline */
+}
+
+
+.team-photo {
+    width: 100px; /* Adjust the size of the photo */
+    height: auto;
+    border-radius: 0%; /* Makes the photo circular */
+    margin-right: 2rem; /* Adds space between the photo and the text */
+    margin-left: 29rem; /* Adds space below each team member */
+
+}
+
+.team-text p {
+    line-height: 1.1; /* Reduces the vertical space between lines */
+}
+
+* {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+        
+    </style>
+    <script>
+        function showTab(tabId) {
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Function to load external content into the Publications, Team, and Research sections
+        function loadContent() {
+            fetch('publications.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('publications').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Failed to load content:', error);
+                });
+
+
+            fetch('team/ali-abdollahzadeh.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('team').innerHTML += data;
+                })
+                .catch(error => {
+                    console.error('Failed to load content:', error);
+                });
+
+            fetch('research.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('research').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Failed to load content:', error);
+                });
+
+
+            fetch('resources.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('resources').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Failed to load content:', error);
+                });
+
+        }
+
+        // Show the "Home" tab by default when the page loads
+        window.onload = function() {
+            showTab('home');
+            loadContent(); // Load external content when the page loads
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+    	<img src="logo.png" alt="Lab Logo" class="logo">
+    	<div class="header-text">
+              <h1>Neurogeometry Modeling Lab</h1>
+              <p>Advancing Brain Microstructure Mapping</p>
+    	</div>
+    </header>
+    <nav>
+        <a onclick="showTab('home')">Home</a>
+        <a onclick="showTab('team')">Team</a>
+	<a onclick="showTab('research')">Research</a>
+        <a onclick="showTab('publications')">Publications</a>
+	<a onclick="showTab('resources')">Resource</a>
+        <a onclick="showTab('contact')">Contact</a>
+    </nav>
+    <div class="content">
+	<div id="home" class="section active">
+    	<div class="home-content">
+	<div class="home-image">
+            <img src="em_seg.png" alt="EM Seg" />
+        </div>
+        <div class="home-text">
+            <p>
+<b>Neurogeometry Modeling Lab</b>, led by Dr. Ali Abdollahzadeh, is affiliated with the A.I. Virtanen Institute for Molecular Sciences at the University of Eastern Finland.<br>
+We seek to understand the statistical properties and organizational principles of brain tissue microstructures fundamental to understanding the macroscopic diffusion MRI signal, thereby effectively spanning 2-3 orders of magnitudes in resolution.<br>
+For this purpose, we have introduced an innovative family of computational tools, e.g., <b>ACSON, DeepACSON, gACSON</b>, and <b>Skeletonize</b>, tailored for the segmentation and morphology analysis of large electron microscopy volumes. These developments unlocked accessing the realistic geometry of white matter tissue microstructures.<br>
+With Prof. Novikov, we have recently developed the <b>scattering framework</b> for diffusion in a tube with varying cross-sectional area and uncovered the relevant parameters that govern the diffusive dynamics of water in axons.</p>
+	<h3>Funding</h3> <!-- Added header here -->
+	<p>Research Council of Finland<p>
+	<div class="home-aka">
+            <img src="AKA.jpg" alt="AKA" />
+        </div>
+    
+        </div>
+    	</div>
+	</div>
+
+        <div id="team" class="section">
+            <!-- h2>Meet the Team</h2 -->
+            <!-- External content will be loaded here -->
+        </div>
+
+        <div id="publications" class="section">
+            <h2>Publications</h2>
+            <!-- External content will be loaded here -->
+        </div>
+
+	<div id="research" class="section">
+            <h2>Research</h2>
+            <!-- External content will be loaded here -->
+        </div>
+
+	<div id="resources" class="section">
+            <h2>Resource</h2>
+            <!-- External content will be loaded here -->
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Principal Investigator: Ali Abdollahzadeh, PhD<br>
+            Email: aliabd#uef.fi#</p>
+            <p>University of Eastern Finland<br>
+            A.I. Virtanen Institute for Molecular Sciences</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Neurogeometry Modeling Lab. All rights reserved.</p>
+    </footer>
+</body>
+</html>
