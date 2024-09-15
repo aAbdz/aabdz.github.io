@@ -152,6 +152,26 @@
             box-shadow: none !important;
         }
         
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .team-member {
+                flex-direction: column; /* Stack photo and text vertically */
+                align-items: center; /* Center items */
+                margin-left: 0; /* Remove any margins */
+            }
+
+            .team-photo {
+                width: 100px; /* Smaller photo on small screens */
+                margin-right: 0; /* No right margin needed when stacking vertically */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-photo {
+                width: 80px; /* Even smaller for mobile */
+            }
+        }
+        
         /* General responsive layout */
         body {
             font-size: 16px;
