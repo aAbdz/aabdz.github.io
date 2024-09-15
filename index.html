@@ -13,36 +13,35 @@
             color: #343a40;
             }
         
-header {
-    display: flex;
-    align-items: center; /* Vertically centers the logo */
-    justify-content: center;
-    background-color: #e6e9e9ff;
-    color: #222d2e;
-    padding: 1rem 0;
-    position: relative;
-    height: 110px; /* Adjust height if necessary */
-}
+        header {
+            display: flex;
+            align-items: center; /* Vertically centers the logo */
+            justify-content: center;
+            background-color: #e6e9e9ff;
+            color: #222d2e;
+            padding: 1rem 0;
+            position: relative;
+            height: 110px; /* Adjust height if necessary */
+        }
 
-.logo {
-    margin-right: 20px; /* Space between the logo and the text */
-    width: 100px; /* Adjust size */
-    height: auto;
-}
+        .logo {
+            margin-right: 20px; /* Space between the logo and the text */
+            width: 100px; /* Adjust size */
+            height: auto;
+        }
 
-.header-text {
-    text-align: center; /* Center the text block */
-}
+        .header-text {
+            text-align: center; /* Center the text block */
+        }
 
-.header-text h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
+        .header-text h1 {
+            font-size: 2.5rem;
+        }
 
-.header-text p {
-    margin: 0;
-    font-size: 1.2rem;
-}
+        .header-text p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
 
         nav {
             background-color: #222d2e;
@@ -61,39 +60,39 @@ header {
             text-decoration: underline;
         }
 
-	.home-content {
-    	    display: flex;
-	        flex-direction: column;
-    	    align-items: center; /* Align items to the top */
-            text-align: left; /* Ensure text stays aligned left */
-	}
+        .home-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Align items to the top */
+                text-align: left; /* Ensure text stays aligned left */
+        }
+            
+        .home-text {
+                margin-left: -15rem; /* Adds space between the text and the image */
+                width: 40%; /* Adjust the width as needed to control text width */
+        }
 
-	.home-text {
-    	    margin-left: -15rem; /* Adds space between the text and the image */
-    	    width: 40%; /* Adjust the width as needed to control text width */
-	}
+        .home-image {
+                display: flex;
+                justify-content: center; /* Center image horizontally */
+        }
 
-	.home-image {
-    	    display: flex;
-    	    justify-content: center; /* Center image horizontally */
-	}
+        .home-image img {
+            display: flex;
+            justify-content: center;
+            margin-top: -1rem;
+            max-width: 65%; /* Makes the image responsive */
+                height: auto; /* Maintains the image's aspect ratio */
+            margin-bottom: 2rem; /* Add distance below the image */
+        }
 
-	.home-image img {
-	    display: flex;
-	    justify-content: center;
-	    margin-top: -1rem;
-	    max-width: 65%; /* Makes the image responsive */
-    	    height: auto; /* Maintains the image's aspect ratio */
-	    margin-bottom: 2rem; /* Add distance below the image */
-	}
-
-	.home-aka img {
-	    display: flex;
-	    margin-top: -1.2rem;
-	    margin-left: -2rem;
-	    max-width: 60%; /* Makes the image responsive */
-    	    height: auto; /* Maintains the image's aspect ratio */
-	}
+        .home-aka img {
+            display: flex;
+            margin-top: -1.2rem;
+            margin-left: -2rem;
+            max-width: 60%; /* Makes the image responsive */
+                height: auto; /* Maintains the image's aspect ratio */
+        }
 
        	.section {
             display: none;
@@ -107,14 +106,14 @@ header {
             display: block;
         }
 
-	.section h2 {
-    	    margin-bottom: 1rem; /* Space below headings */
-	}
+        .section h2 {
+                margin-bottom: 1rem; /* Space below headings */
+        }
 
-	/* Optional: adjust padding and margin of content elements */
-	.section p {
-    	    margin-bottom: 1rem; /* Space between paragraphs */
-	}
+        /* Optional: adjust padding and margin of content elements */
+        .section p {
+                margin-bottom: 1rem; /* Space between paragraphs */
+        }
 
         footer {
             background-color: #222d2e;
@@ -125,35 +124,130 @@ header {
 	    position: relative;
         }
 
-    .team-member {
-        display: flex;
-        align-items: flex-start; /* Vertically aligns the photo and text */
-        margin-bottom: 2rem; /* Adds space below each team member */
-        margin-left: -15rem; /* Adds space below each team member */
-        width: 100%; /* Adjust the width as needed to control text width */
-    }
+        .team-member {
+            display: flex;
+            align-items: flex-start; /* Vertically aligns the photo and text */
+            margin-bottom: 2rem; /* Adds space below each team member */
+            margin-left: -15rem; /* Adds space below each team member */
+            width: 100%; /* Adjust the width as needed to control text width */
+        }
 
 
-    .team-photo {
-        width: 100px; /* Adjust the size of the photo */
-        height: auto;
-        border-radius: 0%; /* Makes the photo circular */
-        margin-right: 2rem; /* Adds space between the photo and the text */
-        margin-left: 29rem; /* Adds space below each team member */
+        .team-photo {
+            width: 100px; /* Adjust the size of the photo */
+            height: auto;
+            border-radius: 0%; /* Makes the photo circular */
+            margin-right: 2rem; /* Adds space between the photo and the text */
+            margin-left: 29rem; /* Adds space below each team member */
 
-    }
+        }
 
-    .team-text p {
-        line-height: 1.1; /* Reduces the vertical space between lines */
-    }
+        .team-text p {
+            line-height: 1.1; /* Reduces the vertical space between lines */
+        }
 
-    * {
-        border: 0 !important;
-        outline: 0 !important;
-        box-shadow: none !important;
-    }
+        * {
+            border: 0 !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+        }
+        
+        /* General responsive layout */
+        body {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header-text h1 {
+            font-size: 2rem;
+        }
+
+        /* For screens larger than 1200px */
+        @media (min-width: 1200px) {
+            .home-text {
+                margin-left: -15rem;
+                width: 40%;
+            }
+        }
+
+        /* For tablets and smaller laptops (between 768px and 1200px) */
+        @media (max-width: 1200px) {
+            .home-text {
+                margin-left: -5rem;
+                width: 60%;
+            }
+
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* For mobile devices (max-width: 768px) */
+        @media (max-width: 768px) {
+            .home-text {
+                width: 90%; /* Use most of the available screen width */
+                margin-left: 0;
+            }
+
+            .home-image img {
+                max-width: 80%; /* Make the image fit better on mobile */
+                margin: 0 auto;
+            }
+
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .team-photo {
+                width: 70px; /* Smaller team member images for mobile */
+                margin-left: 1rem;
+            }
+
+            .home-aka img {
+                margin-left: 0;
+                max-width: 100%;
+            }
+
+            /* Adjust the nav links for smaller screens */
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+                font-size: 1rem;
+            }
+        }
+
+        /* Extra small devices like phones (max-width: 480px) */
+        @media (max-width: 480px) {
+            .header-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .home-text {
+                width: 95%;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+            }
+
+            footer {
+                padding: 0.5rem;
+            }
+        }
         
     </style>
+    
+    
+    
     <script>
         function showTab(tabId) {
             var sections = document.getElementsByClassName('section');
