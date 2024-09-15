@@ -42,6 +42,40 @@
             margin: 0;
             font-size: 1.2rem;
         }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack logo and text vertically */
+                height: auto; /* Adjust height based on content */
+            }
+
+            .logo {
+                width: 60px; /* Smaller logo for smaller screens */
+            }
+
+            .header-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-text p {
+                font-size: 1rem; /* Smaller font for subtitle on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 50px; /* Even smaller logo for mobile screens */
+            }
+
+            .header-text h1 {
+                font-size: 1.5rem; /* Smaller header for mobile */
+            }
+
+            .header-text p {
+                font-size: 0.9rem;
+            }
+        }
 
         nav {
             background-color: #222d2e;
