@@ -8,7 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Khmer MN', serif;
             background-color: #ffffff;
             color: #343a40;
             }
@@ -31,52 +31,27 @@
         }
 
         .header-text {
-            text-align: center; /* Center the text block */
+    	    text-align: center;
+            font-family: "Georgia", serif; /* Default for all text */
         }
 
         .header-text h1 {
+            font-family: "Khmer MN", serif; !important;
             font-size: 2.5rem;
         }
 
-        .header-text p {
-            margin: 0;
-            font-size: 1.2rem;
-        }
-        
         /* Responsive adjustments */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column; /* Stack logo and text vertically */
-                height: auto; /* Adjust height based on content */
-            }
-
-            .logo {
-                width: 60px; /* Smaller logo for smaller screens */
-            }
-
-            .header-text h1 {
-                font-size: 1.8rem;
-            }
-
-            .header-text p {
-                font-size: 1rem; /* Smaller font for subtitle on smaller screens */
+       @media (max-width: 768px) {
+        .header-text h1 {
+            font-size: 1.8rem;
             }
         }
 
         @media (max-width: 480px) {
-            .logo {
-                width: 50px; /* Even smaller logo for mobile screens */
-            }
-
-            .header-text h1 {
-                font-size: 1.5rem; /* Smaller header for mobile */
-            }
-
-            .header-text p {
-                font-size: 0.9rem;
+        .header-text h1 {
+            font-size: 1.5rem;
             }
         }
-
         nav {
             background-color: #bac3c4ff;
             padding: 0.5rem 0;
