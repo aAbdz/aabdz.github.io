@@ -23,6 +23,16 @@
             position: relative;
             height: 130px; /* Adjust height if necessary */
         }
+        
+        .container {
+            min-height: 100vh; /* Ensures the content takes at least the full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+
+	.content {
+	    flex: 1; /* Pushes the footer down */
+	}
 
         .logo {
             margin-right: 20px; /* Space between the logo and the text */
@@ -131,7 +141,7 @@
             text-align: center;
             padding: 1rem;
             width: 100%;
-	    position: relative;
+	    /* position: relative; */
         }
 
         .team-member {
@@ -365,6 +375,17 @@
               <p>Advancing Brain Microstructure Mapping</p>
     	</div>
     </header>
+    
+    <div class="container">
+    <div class="content">
+        <!-- Main page content here -->
+    </div>
+    <footer class="footer">
+        <!-- Footer content here -->
+    </footer>
+    </div>
+    
+    
     <nav>
         <a onclick="showTab('home')">HOME</a>
         <a onclick="showTab('team')">TEAM</a>
@@ -373,6 +394,7 @@
 	<a onclick="showTab('resources')">RESOURCES</a>
         <a onclick="showTab('contact')">CONTACT</a>
     </nav>
+    
     <div class="content">
 	<div id="home" class="section active">
     	<div class="home-content">
